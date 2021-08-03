@@ -1,2 +1,3 @@
-# react-performance-workshop
-Workshop for React and Webperformance
+# React Performance Workshop
+
+This Repo contains some sample code for a workshop on React performance.
