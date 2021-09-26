@@ -1,8 +1,7 @@
 import React from "react";
+
 import GridItem from "../components/GridItem";
-
 import countries from "../data/countries.json";
-
 
 const TravelGrid = (props) => {
   const { count, lazy } = props;

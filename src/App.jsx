@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Navigation from "./components/Navigation";
 import PageLoader from "./components/PageLoader";
-import Footer from "./components/Footer";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Slick = React.lazy(() => import("./pages/Slick"));
@@ -28,7 +27,6 @@ const AppWrapper = () => {
       <Suspense fallback={<PageLoader />}>
         <App />
       </Suspense>
-      
     </BrowserRouter>
   );
 };

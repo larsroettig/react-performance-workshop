@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Shimmer } from "react-shimmer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const GridItem = (props) => {
   const { price, title, lazy = false } = props;
@@ -12,12 +12,13 @@ const GridItem = (props) => {
     getRandomNumber();
 
   const fastImg = (
-    <div
+    <LazyLoadImage
       className="w-full h-full object-center object-cover lg:w-full lg:h-full"
-      style={{ width: 280, height: 320 }}
-    >
-      <Image src={src} fallback={<Shimmer width={280} height={320} />} />
-    </div>
+      height={320}
+      src={src}
+      
+      width={280}
+    />
   );
 
   const slowImg = (
