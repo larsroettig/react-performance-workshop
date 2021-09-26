@@ -1,0 +1,22 @@
+{
+  "travel": [
+    {
+      "id": 1,
+      "country": "norway",
+      "city": "Bergen",
+      "ur": "https://source.unsplash.com/1200x600/?nature,water&amp;&amp;sig=223saw"
+    },
+    {
+      "id": 2,
+      "city": "Berlin",
+      "country": "germany",
+      "ur": "https://source.unsplash.com/1200x600/?nature,water&amp;&amp;sig=223saw"
+    },
+    {
+      "id": 3,
+      "country": "germany",
+      "city": "Berlin",
+      "ur": "https://source.unsplash.com/1200x600/?nature,water&amp;&amp;sig=223saw"
+    }
+  ]
+}

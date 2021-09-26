@@ -1,21 +1,21 @@
 import React from "react";
 import Slider from "react-slick";
 import useFakeFetchData from "../hooks/useFakeFetchData";
-import SliderShimmer from "../components/SliderShimmer";
+import SliderShimmer from "./SliderShimmer";
 
-const SlowSlider = () => {
+const FastSlider = () => {
   const { isLoading, data } = useFakeFetchData(
     "https://source.unsplash.com/1200x600/?nature,water&"
   );
 
   if (isLoading === true) {
-    //return <SliderShimmer />;
-    return "";
+    return <SliderShimmer />;
   }
 
   const settings = {
     dots: false,
     infinite: true,
+    lazyLoad: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -24,12 +24,12 @@ const SlowSlider = () => {
   };
 
   return (
-    <div className="m-auto">
-      <Slider {...settings} style={{ width: 1200, margin: "auto" }}>
+    <div className="m-auto" style={{ width: 1200, height: 600 }}>
+      <Slider {...settings}>
         {data.map(function (item, index) {
           return (
             <div key={index}>
-              <img src={item} />
+              <img src={item} style={{ width: 1200, heigt: 600 }} />
             </div>
           );
         })}
@@ -38,4 +38,4 @@ const SlowSlider = () => {
   );
 };
 
-export default SlowSlider;
+export default FastSlider;

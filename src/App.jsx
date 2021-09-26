@@ -1,16 +1,22 @@
 import React, { Suspense } from "react";
-import Loader from "react-loader-spinner";
-import { BrowserRouter, useRoutes } from "react-router-dom";
 
-import Home from "./pages/Home";
+import { BrowserRouter, useRoutes } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Navigation from "./components/Navigation";
+import PageLoader from "./components/PageLoader";
+import Footer from "./components/Footer";
+
+const Home = React.lazy(() => import("./pages/Home"));
 const Slick = React.lazy(() => import("./pages/Slick"));
-const SlickBackground = React.lazy(() => import("./pages/SlickBackground"));
+const Journey = React.lazy(() => import("./pages/Journey"));
 
 const App = () => {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
-    { path: "/slick", element: <Slick /> },
-    { path: "/slick_background", element: <SlickBackground /> },
+    { path: "/slow_journey", element: <Slick /> },
+    { path: "/journey", element: <Journey /> },
   ]);
   return routes;
 };
@@ -18,9 +24,11 @@ const App = () => {
 const AppWrapper = () => {
   return (
     <BrowserRouter>
-      <Suspense fallback="">
+      <Navigation />
+      <Suspense fallback={<PageLoader />}>
         <App />
       </Suspense>
+      
     </BrowserRouter>
   );
 };

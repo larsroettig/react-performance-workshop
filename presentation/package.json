@@ -1,0 +1,13 @@
+{
+  "name": "reveal-vite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "reveal.js": "*",
+    "vite": "^2.4.4"
+  }
+}

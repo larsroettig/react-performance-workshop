@@ -1,20 +1,18 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "/", current: false },
+  { name: "Slow Journey", href: "/slow_journey", current: false },
+  { name: "Journey", href: "/journey", current: false },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Navigation() {
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
   return (
     <Disclosure as="nav" className="bg-gray-800 ">
       {({ open }) => (
