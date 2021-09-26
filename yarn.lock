@@ -1308,7 +1308,7 @@ react-dom@^17.0.0:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-glider@^2.2.0:
+react-glider@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-glider/-/react-glider-2.2.1.tgz#ebda8cb9bd6a3661ac2069c29485c92a8f85e46c"
   integrity sha512-9RS/VqQU9tGqROHyXULjnrejhoHUhW/iRvqObkCTnTtQbabzt2CNx0kSvjv5NX17XHi43fT+m3O5SIVfD86xLA==

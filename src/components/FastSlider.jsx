@@ -1,7 +1,15 @@
 import React from "react";
-import Slider from "react-slick";
+import Glider from "react-glider";
+import "glider-js/glider.min.css";
+
 import useFakeFetchData from "../hooks/useFakeFetchData";
 import SliderShimmer from "./SliderShimmer";
+
+const Pane = ({ children, style, className }) => (
+  <div className={`glider-slide ${className ? className : ""}`} style={style}>
+    <h1>{children}</h1>
+  </div>
+);
 
 const FastSlider = () => {
   const { isLoading, data } = useFakeFetchData(
@@ -12,28 +20,21 @@ const FastSlider = () => {
     return <SliderShimmer />;
   }
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    lazyLoad: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-  };
-
   return (
     <div className="m-auto" style={{ width: 1200, height: 600 }}>
-      <Slider {...settings}>
+      <Glider draggable hasArrows hasDots slidesToShow={1} slidesToScroll={1}>
         {data.map(function (item, index) {
           return (
-            <div key={index}>
-              <img src={item} style={{ width: 1200, heigt: 600 }} />
-            </div>
+            <Pane key={index}>
+              <img
+                src={item}
+                style={{ width: 1200, heigt: 600 }}
+                loading="lazy"
+              />
+            </Pane>
           );
         })}
-      </Slider>
+      </Glider>
     </div>
   );
 };

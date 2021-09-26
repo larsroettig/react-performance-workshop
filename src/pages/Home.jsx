@@ -22,10 +22,11 @@ const Home = (isContentPage = false) => {
       <Page>
         <h1>Slow Input</h1>
         <FormComponent dog={dog} onChange={setDog} />
+
         <h1>Fast Input</h1>
         <FastFormComponent />
 
-        <SlowComponent time={200} />
+        <SlowComponent />
 
         <a href="https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster">
           State Colocation

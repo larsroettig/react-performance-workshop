@@ -1,8 +1,12 @@
-import sleep from "../util/sleep";
+import React from "react";
 
-const SlowComponent = ({ time = 100 }) => {
-  sleep(time);
-  // renders a lot of data
+const PENALTY = 150_000;
+let currentPenaltyValue = 2;
+
+const SlowComponent = () => {
+  for (let index = 2; index < PENALTY; index++) {
+    currentPenaltyValue = currentPenaltyValue ** index;
+  }
   return "";
 };
 

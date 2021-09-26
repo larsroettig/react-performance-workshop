@@ -3,6 +3,9 @@ import Page from "../components/Page";
 import TravelGrid from "../components/Grid";
 import SlowSlider from "../components/SlowSlider";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const Slick = () => {
   return (
     <Page>
