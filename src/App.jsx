@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 
 import { BrowserRouter, useRoutes } from "react-router-dom";
 
-
+import "glider-js/glider.min.css";
 import Navigation from "./components/Navigation";
 import PageLoader from "./components/PageLoader";
 

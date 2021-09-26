@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import useFakeFetchData from "../hooks/useFakeFetchData";
-import SliderShimmer from "../components/SliderShimmer";
 
 const SlowSlider = () => {
   const { isLoading, data } = useFakeFetchData(
@@ -9,7 +8,6 @@ const SlowSlider = () => {
   );
 
   if (isLoading === true) {
-    //return <SliderShimmer />;
     return "";
   }
 
@@ -21,6 +19,7 @@ const SlowSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    lazyLoad: true,
   };
 
   return (
